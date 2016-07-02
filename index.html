@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search Data</title>
+		<style>
+			div{
+				margin: 30px;
+			} 
+			input[type=submit] {
+				margin-left: 30px;
+			} 
+		</style>
+		<script>
+			function clearInput()
+			{
+				document.getElementById('inputValue').value = '';
+			}
+		</script>
+	</head>
+    <body>
+		<div>
+			<h2>Search</h2>
+		</div>
+		<form action="search" method="POST">
+			<div>
+				<span>Select parameter for the query</span>
+				<select name="type" onchange="clearInput();">
+					<option value="1">Automobile Insurance Policy Number</option>
+					<option value="2">Vehicle Owner Name</option>
+				</select>
+			</div>
+			<div>
+				<span>Enter your value</span>
+				<input id="inputValue" name="param"/>
+			</div>
+			<input type="submit" value="Query"/>
+		</form>
+	</body>
+</html>
